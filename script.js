@@ -1,87 +1,149 @@
-<div class="tabs">
-    <a href="#" class="active">🛠 Skills</a>
-    <a href="#">💼 Experience</a>
-    <a href="#">🎓 Education</a>
-</div>
+```javascript
+/* =========================================
+   MOBILE MENU
+========================================= */
 
-<!-- Skills -->
-<div class="tab-content active-content">
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-    <div class="skills-list">
+menuBtn.addEventListener("click", function () {
 
-        <div class="skill-group">
-            <h4>Languages</h4>
-            <p>English and Spanish</p>
-        </div>
+    navLinks.classList.toggle("show");
 
-        <div class="skill-group">
-            <h4>Front-End</h4>
-            <p>React, Angular, Vue, HTML, CSS, Bootstrap, JavaScript, TypeScript</p>
-        </div>
-
-        <div class="skill-group">
-            <h4>Back-End</h4>
-            <p>Node, Express, Python, Django, PHP, Laravel</p>
-        </div>
-
-        <div class="skill-group">
-            <h4>Database</h4>
-            <p>MongoDB, MySQL</p>
-        </div>
-
-        <div class="skill-group">
-            <h4>Tools</h4>
-            <p>Git, GitHub, Jira, Postman</p>
-        </div>
-
-    </div>
-
-</div>
+});
 
 
-<!-- Experience -->
-<div class="tab-content">
+/* =========================================
+   CLOSE MOBILE MENU
+   WHEN A LINK IS CLICKED
+========================================= */
 
-    <div class="experience-item">
-        <h3>Web Developer Intern</h3>
-        <h4>Software Company | 2026</h4>
-        <p>
-            Worked on front-end development and created responsive
-            websites using HTML, CSS, JavaScript and Bootstrap.
-        </p>
-    </div>
+const navItems = document.querySelectorAll(".nav-links a");
 
-    <div class="experience-item">
-        <h3>Personal Projects</h3>
-        <h4>Web Development</h4>
-        <p>
-            Developed responsive portfolio and e-commerce websites
-            using modern front-end technologies.
-        </p>
-    </div>
+navItems.forEach(function (item) {
 
-</div>
+    item.addEventListener("click", function () {
+
+        navLinks.classList.remove("show");
+
+    });
+
+});
 
 
-<!-- Education -->
-<div class="tab-content">
+/* =========================================
+   CONTACT FORM
+========================================= */
 
-    <div class="education-item">
-        <h3>B.Sc. Information Technology</h3>
-        <h4>2023 – 2026</h4>
-        <p>
-            Studied programming, database management, networking,
-            operating systems, web development and computer science.
-        </p>
-    </div>
+const contactForm = document.getElementById("contactForm");
 
-    <div class="education-item">
-        <h3>Higher Secondary Education</h3>
-        <h4>Completed</h4>
-        <p>
-            Completed higher secondary education with an interest
-            in computer science and technology.
-        </p>
-    </div>
+contactForm.addEventListener("submit", function (event) {
 
-</div>
+    event.preventDefault();
+
+    alert("Thank you! Your message has been received.");
+
+    contactForm.reset();
+
+});
+
+
+/* =========================================
+   NAVBAR SCROLL EFFECT
+========================================= */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 50) {
+
+        header.style.background = "rgba(5, 5, 5, 0.98)";
+
+    } else {
+
+        header.style.background = "rgba(8, 8, 8, 0.95)";
+
+    }
+
+});
+
+
+/* =========================================
+   REVEAL SECTIONS ON SCROLL
+========================================= */
+
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(
+
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.1
+    }
+
+);
+
+
+sections.forEach(function (section) {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity 0.7s ease, transform 0.7s ease";
+
+    observer.observe(section);
+
+});
+
+
+/* =========================================
+   ACTIVE NAVIGATION LINK
+========================================= */
+
+const pageSections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", function () {
+
+    let currentSection = "";
+
+    pageSections.forEach(function (section) {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+
+            currentSection = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navItems.forEach(function (link) {
+
+        link.style.color = "#ddd";
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+
+            link.style.color = "#ff5722";
+
+        }
+
+    });
+
+});
+```

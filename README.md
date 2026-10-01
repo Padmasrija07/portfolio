@@ -1,2 +1,0 @@
-# portfolio
-malar software solutions

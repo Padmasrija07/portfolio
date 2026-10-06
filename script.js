@@ -58,11 +58,11 @@ window.addEventListener("scroll", function () {
 
     if (window.scrollY > 50) {
 
-        header.style.background = "rgba(5, 5, 5, 0.98)";
+        header.style.background = "rgba(18, 11, 26, 0.98)";
 
     } else {
 
-        header.style.background = "rgba(8, 8, 8, 0.95)";
+        header.style.background = "rgba(18, 11, 26, 0.95)";
 
     }
 
@@ -139,7 +139,7 @@ window.addEventListener("scroll", function () {
 
         if (link.getAttribute("href") === "#" + currentSection) {
 
-            link.style.color = "#ff5722";
+            link.style.color = "#C4B5FD";
 
         }
 

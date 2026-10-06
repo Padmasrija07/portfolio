@@ -898,4 +898,134 @@ footer p:first-child {
         margin-bottom: 40px;
     }
 }
-```
+```/* =========================================
+   PURPLE + LAVENDER THEME
+========================================= */
+
+body {
+    background: #120B1A !important;
+    color: #ffffff;
+}
+
+/* Sections */
+.dark-section {
+    background: #180F24 !important;
+}
+
+/* Navbar */
+header {
+    background: rgba(18, 11, 26, 0.95) !important;
+    border-bottom: 1px solid #342044;
+}
+
+/* Purple / Lavender main colour */
+.logo span,
+.small-title,
+.section-title p,
+.section-title h2 span,
+.home h2 span,
+.project-number,
+.project-link,
+.timeline-content span {
+    color: #C4B5FD !important;
+}
+
+/* Navigation */
+.nav-links a:hover {
+    color: #C4B5FD !important;
+}
+
+/* Buttons */
+.btn {
+    background: #8B5CF6 !important;
+    border-color: #8B5CF6 !important;
+}
+
+.btn:hover {
+    background: transparent !important;
+    color: #C4B5FD !important;
+}
+
+.btn-outline:hover {
+    border-color: #A78BFA !important;
+    color: #C4B5FD !important;
+}
+
+/* Profile image */
+.image-circle {
+    border-color: #A78BFA !important;
+}
+
+.image-circle::before {
+    border-color: #C4B5FD !important;
+}
+
+/* Cards */
+.info-box,
+.skill-card,
+.project-card {
+    background: #1C1228 !important;
+    border-color: #342044 !important;
+}
+
+.info-box:hover,
+.skill-card:hover,
+.project-card:hover {
+    border-color: #A78BFA !important;
+}
+
+/* Card headings */
+.info-box strong {
+    color: #C4B5FD !important;
+}
+
+/* Skill icon */
+.skill-icon {
+    background: rgba(167, 139, 250, 0.12) !important;
+    border-color: #A78BFA !important;
+    color: #C4B5FD !important;
+}
+
+/* Tags */
+.skill-tags span,
+.project-tech span {
+    background: #2A1B38 !important;
+    color: #D8CCF5 !important;
+}
+
+/* Timeline */
+.timeline::before {
+    background: #49345C !important;
+}
+
+.timeline-dot {
+    background: #8B5CF6 !important;
+    border-color: #180F24 !important;
+}
+
+/* Contact form */
+.contact-form input,
+.contact-form textarea {
+    background: #1C1228 !important;
+    border-color: #342044 !important;
+    color: white !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #A78BFA !important;
+}
+
+/* Footer */
+footer {
+    background: #0D0713 !important;
+    border-top-color: #342044 !important;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .nav-links {
+        background: #180F24 !important;
+        border-bottom-color: #342044 !important;
+    }
+}

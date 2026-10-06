@@ -15,7 +15,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #080808;
+    background: #120B1A;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -39,7 +39,7 @@ section {
 }
 
 .dark-section {
-    background: #0e0e0e;
+    background: #180F24;
 }
 
 .section-title {
@@ -74,9 +74,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(8, 8, 8, 0.95);
+    background: rgba(18, 11, 26, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #30203D;
     z-index: 1000;
 }
 
@@ -97,7 +97,7 @@ header {
 }
 
 .logo span {
-    color: #ff5722;
+    color: #C4B5FD;
 }
 
 .nav-links {
@@ -116,7 +116,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #ff5722;
+    color: #C4B5FD;
 }
 
 .menu-btn {
@@ -156,7 +156,7 @@ header {
 }
 
 .small-title {
-    color: #ff5722;
+    color: #C4B5FD;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 4px;
@@ -176,7 +176,7 @@ header {
 }
 
 .home h2 span {
-    color: #ff5722;
+    color: #A78BFA;
 }
 
 .home-content > p:not(.small-title) {
@@ -697,9 +697,9 @@ header {
 footer {
     padding: 30px;
 
-    background: #050505;
+    background: #0D0713;
 
-    border-top: 1px solid #222;
+    border-top: 1px solid #30203D;
 
     text-align: center;
 
